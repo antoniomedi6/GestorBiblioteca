@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('prestamos', function (Blueprint $table) {
             $table->id();
             $table->date('fecha_prestamo');
-            $table->date('fecha_devolucion');
+            $table->date('fecha_devolucion')->nullable();
             $table->enum('estado', ['Activo', 'Devuelto']);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('libro_id')->constrained()->onDelete('cascade');

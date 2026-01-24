@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('nacionalidad');
-            $table->date('fecha_nacimineto');
+            $table->date('fecha_nacimiento');
             $table->text('biografia');
             $table->timestamps();
         });
