@@ -21,7 +21,7 @@
                     <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
                         {{ __('Autores') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                    <x-nav-link href="{{ route('categorias') }}" :active="request()->routeIs('categorias')">
                         {{ __('Categorías') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
