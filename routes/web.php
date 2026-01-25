@@ -4,6 +4,7 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Livewire\Authors\ShowAuthors;
 use App\Livewire\Categorias\ShowCategorias;
 use App\Livewire\Libros\ShowLibros;
+use App\Livewire\Prestamos\ShowPrestamos;
 use App\Models\Libro;
 use Illuminate\Support\Facades\Route;
 
@@ -17,10 +18,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
     Route::get('libros', ShowLibros::class)->middleware(AdminMiddleware::class)->name('libros');
     Route::get('autores', ShowAuthors::class)->middleware(AdminMiddleware::class)->name('autores');
     Route::get('categorias', ShowCategorias::class)->middleware(AdminMiddleware::class)->name('categorias');
+    Route::get('prestamos', ShowPrestamos::class)->middleware(AdminMiddleware::class)->name('prestamos');
 });

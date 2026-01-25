@@ -12,9 +12,6 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-4 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
                     <x-nav-link href="{{ route('libros') }}" :active="request()->routeIs('libros')">
                         {{ __('Libros') }}
                     </x-nav-link>
@@ -24,7 +21,7 @@
                     <x-nav-link href="{{ route('categorias') }}" :active="request()->routeIs('categorias')">
                         {{ __('Categorías') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                    <x-nav-link href="{{ route('prestamos') }}" :active="request()->routeIs('prestamos')">
                         {{ __('Préstamos') }}
                     </x-nav-link>
                 </div>
@@ -108,9 +105,18 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+        <div class="pt-2 pb-3 space-y-1">>
+            <x-responsive-nav-link href="{{ route('libros') }}" :active="request()->routeIs('libros')">
+                {{ __('Libros') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                {{ __('Autores') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('categorias') }}" :active="request()->routeIs('categorias')">
+                {{ __('Categorias') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('prestamos') }}" :active="request()->routeIs('prestamos')">
+                {{ __('Prestamos') }}
             </x-responsive-nav-link>
         </div>
 
