@@ -20,8 +20,8 @@ class Prestamo extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function libros(): HasMany
+    public function libro(): BelongsTo
     {
-        return $this->hasMany(Libro::class);
+        return $this->belongsTo(Libro::class);
     }
 }
