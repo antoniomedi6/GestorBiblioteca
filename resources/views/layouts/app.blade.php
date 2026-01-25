@@ -72,6 +72,7 @@
             });
         }
         Livewire.on('evtBorrarLibro', (destino) => mostrarDialogoBorrado(destino));
+        Livewire.on('evtBorrarAutor', (destino) => mostrarDialogoBorrado(destino));
         Livewire.on('mensaje', txt => {
             Swal.fire({
                 icon: "success",

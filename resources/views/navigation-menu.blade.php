@@ -18,6 +18,15 @@
                     <x-nav-link href="{{ route('libros') }}" :active="request()->routeIs('libros')">
                         {{ __('Libros') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                        {{ __('Autores') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                        {{ __('Categorías') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('autores') }}" :active="request()->routeIs('autores')">
+                        {{ __('Préstamos') }}
+                    </x-nav-link>
                 </div>
 
             </div>
